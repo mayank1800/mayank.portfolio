@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
@@ -25,7 +24,6 @@ export const AnimatedCharacters = ({
   className = "",
   once = false,
 }: AnimatedCharactersProps) => {
-  // Split text into array of letters
   const letters = Array.from(text);
 
   const container = {
@@ -40,20 +38,12 @@ export const AnimatedCharacters = ({
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
+      transition: { type: "spring", damping: 12, stiffness: 100 },
     },
     hidden: {
       opacity: 0,
       y: 20,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
+      transition: { type: "spring", damping: 12, stiffness: 100 },
     },
   };
 
@@ -83,22 +73,13 @@ export const AnimatedWords = ({
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        delay: 0.5,
-        staggerChildren: 0.12,
-      },
+      transition: { delay: 0.5, staggerChildren: 0.12 },
     },
   };
 
   const word = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-      },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
   return (
