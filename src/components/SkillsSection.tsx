@@ -6,31 +6,37 @@ const SkillsSection = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   const skills = [
-    // Programming
-    { name: "Python", category: "Programming", color: "#3776AB", bgColor: "bg-blue-500/20" },
-    { name: "SQL", category: "Programming", color: "#4479A1", bgColor: "bg-blue-600/20" },
+  // Programming
+  { name: "Python", category: "Programming", color: "#3776AB", bgColor: "bg-blue-500/20" },
+  { name: "SQL", category: "Programming", color: "#4479A1", bgColor: "bg-blue-600/20" },
 
-    // Databases
-    { name: "MySQL", category: "Databases", color: "#4479A1", bgColor: "bg-blue-500/20" },
+  // Databases
+  { name: "PostgreSQL", category: "Databases", color: "#336791", bgColor: "bg-blue-700/20" },
+  { name: "MySQL", category: "Databases", color: "#4479A1", bgColor: "bg-blue-500/20" },
 
-    // Data Analysis
-    { name: "Pandas", category: "Data Analysis", color: "#150458", bgColor: "bg-indigo-900/20" },
-    { name: "NumPy", category: "Data Analysis", color: "#013243", bgColor: "bg-purple-900/20" },
-    { name: "Matplotlib", category: "Data Analysis", color: "#11557C", bgColor: "bg-blue-700/20" },
+  // Data Analysis
+  { name: "Pandas", category: "Data Analysis", color: "#150458", bgColor: "bg-indigo-900/20" },
+  { name: "NumPy", category: "Data Analysis", color: "#013243", bgColor: "bg-purple-900/20" },
+  { name: "Matplotlib", category: "Data Analysis", color: "#11557C", bgColor: "bg-blue-700/20" },
+  { name: "Seaborn", category: "Data Analysis", color: "#4B0082", bgColor: "bg-indigo-600/20" },
+  { name: "Scikit-learn", category: "Data Analysis", color: "#F7931E", bgColor: "bg-orange-500/20" },
 
-    // Visualization
-    { name: "Excel", category: "Visualization", color: "#217346", bgColor: "bg-green-600/20" },
-    { name: "Power BI", category: "Visualization", color: "#F2C811", bgColor: "bg-yellow-500/20" },
-    { name: "Tableau", category: "Visualization", color: "#E97627", bgColor: "bg-orange-600/20" },
+  // BI & Visualization
+  { name: "Power BI", category: "BI & Visualization", color: "#F2C811", bgColor: "bg-yellow-500/20" },
+  { name: "Tableau", category: "BI & Visualization", color: "#E97627", bgColor: "bg-orange-600/20" },
+  { name: "Excel", category: "BI & Visualization", color: "#217346", bgColor: "bg-green-600/20" },
+  { name: "Power Query", category: "BI & Visualization", color: "#1D6F42", bgColor: "bg-green-700/20" },
+  { name: "DAX", category: "BI & Visualization", color: "#B73225", bgColor: "bg-red-600/20" },
 
-    // Tools
-    { name: "Jupyter", category: "Tools", color: "#DA5B0B", bgColor: "bg-orange-500/20" },
-    { name: "Git", category: "Tools", color: "#F05032", bgColor: "bg-red-500/20" },
-    { name: "GitHub", category: "Tools", color: "#181717", bgColor: "bg-gray-900/20" },
-    { name: "VS Code", category: "Tools", color: "#007ACC", bgColor: "bg-blue-700/20" },
-  ];
+  // Tools
+  { name: "Jupyter", category: "Tools", color: "#DA5B0B", bgColor: "bg-orange-500/20" },
+  { name: "Git", category: "Tools", color: "#F05032", bgColor: "bg-red-500/20" },
+  { name: "GitHub", category: "Tools", color: "#181717", bgColor: "bg-gray-900/20" },
+  { name: "VS Code", category: "Tools", color: "#007ACC", bgColor: "bg-blue-700/20" },
+];
 
-  const categories = ["All", "Programming", "Databases", "Data Analysis", "Visualization", "Tools"];
+const categories = ["All", "Programming", "Databases", "Data Analysis", "BI & Visualization", "Tools"];
+
 
   const filteredSkills =
     activeFilter === "All"
